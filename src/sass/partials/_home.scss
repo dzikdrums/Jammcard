@@ -1,8 +1,7 @@
 .main-container {
   background-color: $color-light;
-  height: 1258px;
+  height: 1180px;
   border-radius: $radius;
-  margin-top: 42px;
 }
 
 // FIRST ROW
@@ -11,13 +10,14 @@
 }
 
 .order .first-row-btn {
-  background-image: url('/images/assets/pizza-1.jpg');
-  background-size: 299px 119px;
+  background-image: url('/images/guitar.jpeg');
+  background-size: 290px 140px;
+
 }
 
 .book .first-row-btn {
-  background-image: url('/images/assets/pizza-2.jpg');
-  margin-left: 6px;
+  background-image: url('/images/studio.jpeg');
+  background-size: cover;
 }
 
 .first-row-btn {
@@ -77,7 +77,7 @@
   border-radius: $radius;
   font-family: $font-header;
   text-transform: uppercase;
-  color: $color-light;
+  color: $color-jamm;
 
   h3 {
     font-size: 26px;
@@ -94,16 +94,16 @@
   }
 }
 
-// THIRD OW
+// THIRD ROW
 .third-row {
   @include flex(row, flex-start, center);
-  margin-top: 102px;
+  margin-top: 60px;
   width: 604;
   margin-left: 34;
 }
 
 .image {
-  background-image: url("/images/assets/pizza-3.jpg");
+  background-image: url("/images/miles.jpeg");
   width: 193px;
   height: 193px;
   background-size: cover;
@@ -146,70 +146,89 @@
   line-height: 23px;
 }
 
-.images-fist-row {
-  margin-top: 80px;
-}
+// FOURTH ROW
 
-.images-fist-row, .images-second-row {
-  @include flex(row, flex-start, center);
-
-  img {
-    width: 193px;
-    height: 193px;
-    margin: 6px;
-    border-radius: $radius;
-  }
-}
-
-.image-gallery {
-  position: relative;
-  @include flex(row, flex-start, center);
-}
-
-.image-gallery img {
-  -webkit-filter: brightness(100%);
-}
-
-.image-gallery:hover {
-  img {
-    -webkit-filter: brightness(50%);
-    transition: $transition;
-  }
-
-  .icons {
-    opacity: 1;
-  }
-}
-
-.icons {
-  top: 40%;
-  font-size: 20px;
+.fourth-row {
+  background-image: url('../images/concert.jpeg');
+  height: 600px;
+  text-align: center;
   color: $color-light;
-  position: absolute;
-  letter-spacing: .2em;
-  opacity: 0;
-  transition: opacity 0.5 ease;
+  font-family: $font-header;
+
+  h2 {
+    font-weight: 300;
+    padding: 40px 0 30px;
+    font-size: 40px;
+  }
 }
 
-.heart, .branch{
+.forth-row-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 200px;
+  margin: 15px;
+
+  p {
+    font-size: 14px;
+
+  }
+
+  button {
+    background-color: Transparent;
+    width: 30px;
+    margin-left: 40%;
+  }
+}
+
+.content-img {
+  width: 200px;
+  border: 4px solid $color-light;
+  transition: all 0.4s ease 0s;
+  cursor: pointer;
+}
+
+.content-img:hover {
+  -webkit-filter: brightness(50%);
+}
+
+.watch-now-button {
   color: $color-light;
-  transition: $transition;
+  background: Transparent;
+  padding: 8px;
+  border: 2px solid $color-main;
+  display: inline-block;
+  transition: all 0.4s ease 0s;
 }
 
-.heart:hover, .branch:hover {
-  color: $color-main;
+.watch-now-button:hover {
+  text-decoration: none;
+  color: $color-dark;
+  background: $color-main;
+  transition: all 0.4s ease 0s;
 }
+
+
+// FOOTER
 
 .footer {
-  margin-top: 12px;
+  background-color: $color-main;
+  height: 60px;
+  display: flex;
+  justify-content: center;
 }
 
 .footer a{
   margin-left: 28px;
-  padding-bottom: 40px;
-  color: $color-main;
+  color: $color-dark;
   font-family: $font-text;
   font-size: $home-size;
   font-weight: $font-normal;
-  line-height: 23px;
+  line-height: 80px;
 }

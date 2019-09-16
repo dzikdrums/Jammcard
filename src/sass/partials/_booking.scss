@@ -141,10 +141,9 @@
 
   .table {
     @extend .h2;
-    width: 70px;
-    height: 70px;
+    width: 110px;
+    height: 110px;
     line-height: 70px;
-    transform: rotate(45deg);
     transform-origin: 50% 50%;
     cursor: pointer;
 
@@ -176,8 +175,10 @@
   }
 
   [data-table="1"] {
-    left: 40px;
-    top: 40px;
+    left: 20px;
+    top: 20px;
+    background-image: url('../images/practice_room_1.jpeg');
+    background-size: cover;
   }
 
   [data-table="2"] {
@@ -186,11 +187,15 @@
     width: 100px;
     height: 100px;
     line-height: 100px;
+    background-image: url('../images/Rehearsal_room_2.jpg');
+    background-size: cover;
   }
 
   [data-table="3"] {
     right: 40px;
     top: 180px;
+    background-image: url('../images/Rehearsal_room_3.jpg');
+    background-size: cover;
   }
 }
 

@@ -1,60 +1,58 @@
 .header {
-  padding: 65px 0 63px 0;
-  background: $color-dark;
+  padding: 65px 0 95px 0;
+  background: $color-main;
   color: $color-light;
+  display: flex;
+  justify-content: center;
 
   &__wrapper {
     position: relative;
   }
-
 }
 
 .logo {
-  display: inline-block;
-  line-height: 1;
+  display: flex;
+  justify-content: center;
 
-  &__title {
-    margin: 0 0 $base-size 0;
-    font-size: ($base-size * 4);
-    font-family: $font-header;
-    font-weight: $font-light;
-    text-transform: uppercase;
-
-    span {
-      font-weight: $font-bold;
-    }
-
+  img {
+    width: auto;
+    height: 150px;
   }
-
-  &__subtitle {
-    margin: 0;
-    font-size: ($base-size * 1.5);
-    font-weight: $font-light;
-    font-style: italic;
-  }
-
 }
+
 
 .main-nav {
   position: absolute;
   @include flex(row, flex-start, flex-start);
   bottom: ($base-size * -8);
+}
 
-  a {
-    @extend .h2;
-    color: $color-main;
-    text-decoration: none;
-    margin-right: ($base-size * 2);
-    text-align: center;
-    padding: $base-size ($base-size * 2);
-    background: darken($color-dark, 5%);
-    border-top-left-radius: $radius;
-    border-top-right-radius: $radius;
+.main-nav-button {
+  border: none;
+  text-decoration: none;
+  background: $color-dark;
+  color: $color-light;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 10px;
+  margin: 2px;
+  text-transform: uppercase;
+  border-top-left-radius: $radius;
+  border-top-right-radius: $radius;
+  display: inline-block;
+  transition: all 0.3s ease 0s;
 
-    &.active {
-      background: lighten($color-dark, 75%);
-    }
-
+  &.active {
+    background: $color-main;
   }
+}
 
+.main-nav-button:hover {
+  color: $color-dark;
+  font-weight: 700;
+  letter-spacing: 8px;
+  background: none;
+  -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+  transition: all 0.3s ease 0s;
 }

@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Pizzeria</title>
+  <title>Jammcard - The Music Professionals Network</title>
+  <link rel="icon" type="image/gif" href="images/jammcard-logo-title.jpg" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="vendor/range-slider.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato:400,300i,700%7COswald:300,500,700&amp;subset=latin-ext" rel="stylesheet">
@@ -17,16 +18,15 @@
     <div class="container">
       <div class="header__wrapper">
         <div class="logo">
-          <h1 class="logo__title"><span>Mamma</span>Mia!</h1>
-          <h2 class="logo__subtitle">the best homemade Italian food</h2>
+            <img src='images/jammcard_logo.jpeg' alt="jammcard_logo">
         </div>
         <div class="main-nav">
-          <a href="#order">Order</a>
-          <a href="#booking">Booking</a>
+          <a class="main-nav-button" href="#hire">Hire</a>
+          <a class="main-nav-button" href="#rent">Rent</a>
         </div>
         <div id="cart" class="cart">
           <div class="cart__summary">
-            <span class="cart__total-number">5</span>
+            <span class="cart__total-number"></span>
             <span class="cart__total-price">Total price: $<strong>0</strong></span>
             <i class="fas fa-chevron-down"></i>
             <i class="fas fa-shopping-cart cart__icon"></i>
@@ -41,7 +41,7 @@
                   <span class="cart__order-price-sum">$<strong>0</strong></span>
                 </li>
                 <li class="cart__order-delivery">
-                  <span class="cart__order-price-name">Delivery:</span>
+                  <span class="cart__order-price-name">Transportation:</span>
                   <span class="cart__order-price-sum">$<strong>0</strong></span>
                 </li>
                 <li class="cart__order-total">
@@ -62,17 +62,17 @@
   </header>
 
   <div id="pages">
-    <section id="order">
+    <section id="hire">
       <div id="product-list" class="product-list container"></div>
     </section>
-    <section id="booking">
+    <section id="rent">
       <div class="booking-wrapper container"></div>
     </section>
   </div>
 
   <script id="template-booking-widget" type="text/x-handlebars-template">
     <div class="booking-widget">
-      <h2 class="page__title no-spacing">Book a table</h2>
+      <h2 class="page__title no-spacing">Book a Practice room</h2>
       <form class="booking-form">
         <div class="time-picker">
           <div class="date-picker">
@@ -82,15 +82,15 @@
           <div class="hour-picker range-slider">
               <div class="output"></div>
               <label class="booking-option-title">Pick a time</label>
-            <input type="range" name="hour" value="12" min="12" max="24" step="0.5">
+            <input type="range" name="hour" value="10" min="10" max="22" step="0.5">
           </div>
         </div>
         <div class="floor-plan">
           <div class="object entry">entry</div>
-          <div class="object bar">bar</div>
-          <div class="object table" data-table="1">table-1</div>
-          <div class="object table table--round" data-table="2">table-2</div>
-          <div class="object table" data-table="3">table-3</div>
+          <div class="object bar">Reception</div>
+          <div class="object table" data-table="1"></div>
+          <div class="object table table--round" data-table="2"></div>
+          <div class="object table" data-table="3"></div>
         </div>
         <div class="booking-options"> <!-- options -->
           <label class="booking-option-title"> <!-- option-row -->
@@ -110,19 +110,19 @@
             </div>
           </label>
           <div> <!-- option-row -->
-            <span class="booking-option-title">Starters</span>
+            <span class="booking-option-title">Wanted gear</span>
             <div class="checkbox"> <!-- checkbox -->
               <label>
-                <input type="checkbox" name="starter" value="water">
+                <input type="checkbox" name="gear" value="In-ear Monitors">
                 <span class="checkbox__checkmark"></span>
-                Water
+                In-ear Monitors
               </label>
             </div>
             <div class="checkbox"> <!-- checkbox -->
               <label>
-                <input type="checkbox" name="starter" value="bread">
+                <input type="checkbox" name="gear" value="PA system">
                 <span class="checkbox__checkmark"></span>
-                Bread
+                PA system
               </label>
             </div>
           </div>
@@ -240,7 +240,7 @@
           </div>
         </div>
 
-    </article> <!-- .product -->
+    </article>
   </script>
   <script src="vendor/range-slider.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>

@@ -28,7 +28,8 @@ class DatePicker extends BaseWidget {
       },
       disable: [
         function(date) {
-          return (date.getDay() === 1);
+          const arrayOfDays = [1, 4, 6, 10, 14, 18, 22, 26, 28];
+          return (arrayOfDays.includes(date.getDate()));
         }
       ],
       onChange: function(selectedDates, dateStr) {
